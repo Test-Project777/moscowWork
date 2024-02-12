@@ -1,0 +1,93 @@
+body {
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+.footer {
+  width: 98.5%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: whitesmoke;
+  color: #000000;
+  padding: 20px;
+  bottom: 0;
+}
+
+.buttonAndLanguage {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.linkFooter {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.links {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  margin: 0 10px;
+  text-decoration: none;
+  color: #000000;
+}
+
+.footer p {
+  text-align: center;
+}
+
+.footer_button {
+  height: 40px;
+  width: 150px;
+  border-radius: 10px;
+}
+
+.custom-select {
+  position: relative;
+  width: 200px;
+  margin: 20px;
+}
+
+.custom-select select {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 2px solid transparent;
+  border-radius: 5px;
+  background-color: whitesmoke;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.custom-select::after {
+  content: '\25BC';
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  pointer-events: none;
+  border-radius: 40px;
+}
+
+.custom-select select:focus {
+  outline: none;
+  border-color: #2196f3;
+}
+
+.custom-select select:focus + ::after {
+  border-color: #2196f3;
+}
+
+.option {
+  border-radius: 10px;
+}
+
+.sub-footer {
+  margin-top: auto; /* Помещаем подкласс внизу футера */
+}

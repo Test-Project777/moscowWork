@@ -1,0 +1,61 @@
+.buttonSearch {
+  height: 56px;
+}
+
+.inputSearch {
+  width: 700px;
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center; /* Выравнивание элементов по центру по вертикали */
+  flex-direction: column;
+}
+
+.mainBox {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  margin-bottom: 100px;
+}
+.title {
+  font-size: 36px;
+  line-height: 44px;
+}
+.content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.searchButtonCompany,
+.searchButtonCategory {
+  background-color: whitesmoke;
+  border-radius: 10px;
+  width: 360px;
+  height: 110px;
+  transition:
+    box-shadow 0.3s,
+    transform 0.3s; /* добавляем transition для плавных изменений */
+}
+
+.searchButtonCompany:hover,
+.searchButtonCategory:hover {
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5); /* добавляем тень при наведении (снизу и справа) */
+  transform: scale(1.05); /* увеличиваем размер кнопки при наведении */
+}
+
+.buttonSearchBox {
+  margin-top: 40px;
+  width: 800px;
+  display: flex;
+  justify-content: space-evenly;
+}
+.contentLogoCompany {
+  height: 1120px;
+  width: 1080px;
+  background-color: aqua;
+}

@@ -1,0 +1,18 @@
+.imageLogoContainer {
+  height: 1120px;
+  width: 1080px;
+  background-color: bisque;
+  margin-top: 40px;
+  border-radius: 20px;
+}
+.CardLogo {
+  height: 90px;
+  width: 176px;
+  padding: 20px 38px;
+  object-fit: cover;
+}
+.image {
+  height: 80%;
+  width: 80%;
+  object-fit: cover;
+}
