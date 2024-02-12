@@ -6,20 +6,20 @@ export default function About(): JSX.Element {
   return (
     <Grid
       container
-      alignItems={'center'}
-      flexDirection={'column'}
+      alignItems="center"
+      flexDirection="column"
       padding={5}
-      justifyContent={'space-between'}
+      justifyContent="space-between"
     >
       <Grid
         item
-        justifyContent={'space-around'}
+        justifyContent="space-around"
         sx={{ backgroundColor: grey[200], width: 800 }}
         borderRadius={2}
         padding={2}
         boxShadow="0px 4px 8px rgba(0, 0, 0, 0.2)"
       >
-      <Typography variant="h4">Информация о нас</Typography>
+        <Typography variant="h4">Информация о нас</Typography>
         <p>
           А также сделанные на базе интернет-аналитики выводы набирают популярность среди
           определенных слоев населения, а значит, должны быть функционально разнесены на независимые
@@ -53,7 +53,7 @@ export default function About(): JSX.Element {
 
       <Grid
         item
-        justifyContent={'space-around'}
+        justifyContent="space-around"
         sx={{ backgroundColor: blue[200], width: 800 }}
         borderRadius={2}
         padding={2}
@@ -74,7 +74,7 @@ export default function About(): JSX.Element {
         </p>
       </Grid>
       <Grid item>
-        <img 
+        <img
           width={100}
           height={60}
           src="https://www.iconbolt.com/preview/facebook/social-media-logos/chat-logo-social-social-media-vk.svg"
