@@ -4,11 +4,22 @@ import React from 'react';
 
 export default function About(): JSX.Element {
   return (
-    <Grid container alignItems={'center'} flexDirection={'column'} >
-        <Typography variant="h4">Информация о нас</Typography>
-      <Grid item justifyContent={'space-around'} sx={{ backgroundColor: grey[200] }}
-      borderRadius={8}>
-
+    <Grid
+      container
+      alignItems={'center'}
+      flexDirection={'column'}
+      padding={5}
+      justifyContent={'space-between'}
+    >
+      <Grid
+        item
+        justifyContent={'space-around'}
+        sx={{ backgroundColor: grey[200], width: 800 }}
+        borderRadius={2}
+        padding={2}
+        boxShadow="0px 4px 8px rgba(0, 0, 0, 0.2)"
+      >
+      <Typography variant="h4">Информация о нас</Typography>
         <p>
           А также сделанные на базе интернет-аналитики выводы набирают популярность среди
           определенных слоев населения, а значит, должны быть функционально разнесены на независимые
@@ -40,13 +51,18 @@ export default function About(): JSX.Element {
         </p>
       </Grid>
 
-      <Typography variant='h4'> Наши достижения</Typography>
-
-      <Grid item justifyContent={'space-around'} sx={{ backgroundColor: blue[200] }}
-      borderRadius={8}>
-
-      <p>
-      енностей. Принимая во внимание показатели успешности, социально-экономическое развитие
+      <Grid
+        item
+        justifyContent={'space-around'}
+        sx={{ backgroundColor: blue[200], width: 800 }}
+        borderRadius={2}
+        padding={2}
+        boxShadow="0px 4px 8px rgba(0, 0, 0, 0.2)"
+        margin={5}
+      >
+        <Typography variant="h4"> Наши достижения</Typography>
+        <p>
+          енностей. Принимая во внимание показатели успешности, социально-экономическое развитие
           предполагает независимые способы реализации как самодостаточных, так и внешне зависимых
           концептуальных решений. И нет сомнений, что многие известные личности, инициированные
           исключительно синтетически, ограничены исключительно образом мышления. Прежде всего,
@@ -55,8 +71,28 @@ export default function About(): JSX.Element {
           способного принимать собственные решения касаемо распределения внутренних резервов и
           ресурсов. Каждый из нас понимает очевидную вещь: повышение уровня гражданского сознания не
           оставляет шанса для приоретизации разума над эмоциями!
-      </p>
-      </Grid> 
+        </p>
+      </Grid>
+      <Grid item>
+        <img 
+          width={100}
+          height={60}
+          src="https://www.iconbolt.com/preview/facebook/social-media-logos/chat-logo-social-social-media-vk.svg"
+          alt="1"
+        />
+        <img
+          width={100}
+          height={60}
+          src="https://static.tildacdn.com/tild3164-6463-4763-b462-393065343863/001.svg"
+          alt="2"
+        />
+        <img
+          width={100}
+          height={60}
+          src="https://www.iconbolt.com/preview/facebook/font-awesome-brands/instagram.svg"
+          alt="3"
+        />
+      </Grid>
     </Grid>
   );
 }
