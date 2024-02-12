@@ -13,7 +13,8 @@ type Props = {
 export default function CardLogoCompany({ item }: Props): JSX.Element {
   return (
     <div className="cardLogo">
-      <img src={item.image} alt={item.title} className='image'/>
+      <img src={item.image} alt={item.title} className='image' title={`Работа в ${item.title}. Вакансия`} />
+
     </div>
   );
 }
