@@ -1,9 +1,13 @@
-import React from 'react'
+import React from 'react';
+import Email from './ui/Email';
+import './style.css';
+import FeedBackForm from './ui/FeedBackForm';
 
-export default function Contact():JSX.Element {
+export default function Contact(): JSX.Element {
   return (
-    <div>
-      <h1>Contacts</h1>
+    <div className="boxContact">
+      <Email />
+      <FeedBackForm />
     </div>
-  )
+  );
 }
