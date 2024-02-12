@@ -6,7 +6,7 @@ export default function Header(): JSX.Element {
 
   return (
     <>
-      <h1 className="title">Сайт поиска работы №2 в Москве</h1>
+      <h1 className="title">Сайт поиска работы №1 в Москве</h1>
       <p>Сейчас у нас {numberVacansion} актуальная вакансия.</p>
       <div>
         <TextField

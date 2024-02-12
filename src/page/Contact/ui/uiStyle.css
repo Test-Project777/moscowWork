@@ -1,3 +1,7 @@
+.linkEmailBox {
+  display: flex;
+  justify-content: space-evenly;
+}
 .linkEmail {
   position: relative;
   min-height: 1px;
@@ -15,9 +19,7 @@
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
   margin-top: 40px;
 }
-.linkEmailBox {
-  display: flex;
-}
+
 .inputGroup {
   display: flex;
   align-items: center;
@@ -29,7 +31,11 @@
   background-color: whitesmoke;
   border-radius: 20px;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
 }
 .btnFeedBack {
   margin-top: 50px;
+  margin-left: 50px;
 }

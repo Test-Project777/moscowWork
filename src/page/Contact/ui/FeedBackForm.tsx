@@ -5,8 +5,8 @@ import { Button, TextField, TextareaAutosize } from '@mui/material';
 export default function FeedBackForm(): JSX.Element {
   return (
     <div className="inputFormBox">
-      <h2>Обратная связь</h2>
-      <p>
+      <h2 style={{ marginLeft: '40%' }}>Обратная связь</h2>
+      <p style={{ marginLeft: '15%' }}>
         Вы можете связаться с нами или задать нам вопрос, воспользовавшись формой, расположенной
         ниже.
       </p>
@@ -28,7 +28,9 @@ export default function FeedBackForm(): JSX.Element {
           aria-label="empty textarea"
           placeholder="Введите ваше сообщение"
         />
-        <Button className='btnFeedBack' variant="contained">Отправить</Button>
+        <Button sx={{ marginTop: '50px', marginBottom: '50px' }} variant="contained">
+          Отправить
+        </Button>
       </div>
     </div>
   );

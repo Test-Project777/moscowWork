@@ -3,9 +3,11 @@ import './uiStyle.css';
 
 export default function Email(): JSX.Element {
   return (
-    <div className='boxEmail'>
-      <h2>Эл. почта</h2>
-      <div className='linkEmailBox'>
+    <div className="boxEmail">
+      <div>
+        <h2 style={{ marginLeft: '40%' }}>Эл. почта</h2>
+      </div>
+      <div className="linkEmailBox"        >
         <div className="linkEmail">
           <p>Служба поддержки</p>
           <a href="mailto:shout68@yandex.ru">shout68@yandex.ru</a>
