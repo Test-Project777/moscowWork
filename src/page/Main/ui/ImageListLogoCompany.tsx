@@ -29,6 +29,9 @@ export default function ImageListLogoCompany(): JSX.Element {
       {card.map((item) => (
         <CardLogoCompany key={item.id} item={item} />
       ))}
+      <div className='textA'>
+        <a href="/jobs">Поиск работы по компании {'>'}</a>
+      </div>
     </div>
   );
 }

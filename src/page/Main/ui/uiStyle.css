@@ -1,18 +1,33 @@
 .imageLogoContainer {
+  display: flex;
+  flex-wrap: wrap; /* Отключаем автоматический перенос элементов на новую строку */
+  justify-content: space-between; /* Выравниваем элементы по горизонтали */
+  align-items: center; /* Выравниваем элементы по вертикали */
   height: 1120px;
   width: 1080px;
-  background-color: bisque;
+  background-color: whitesmoke;
   margin-top: 40px;
   border-radius: 20px;
 }
-.CardLogo {
-  height: 90px;
-  width: 176px;
-  padding: 20px 38px;
+.cardLogo {
+  height: 130px;
+  width: 130px;
+  margin: 15px;
+  transition: transform 0.3s; /* добавляем плавное изменение размера при наведении */
+}
+
+.cardLogo:hover {
+  transform: scale(1.1); /* увеличиваем размер на 10% при наведении */
+}
+
+.image {
+  height: 100%;
+  width: 100%;
   object-fit: cover;
 }
-.image {
-  height: 80%;
-  width: 80%;
-  object-fit: cover;
+*body {
+  background-color: lightgrey;
+}
+.textA{
+  
 }
