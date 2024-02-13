@@ -73,7 +73,7 @@ export default function About(): JSX.Element {
           оставляет шанса для приоретизации разума над эмоциями!
         </p>
       </Grid>
-      <Grid item>
+      <Grid item width={300} margin="auto">
         <img
           width={100}
           height={60}
