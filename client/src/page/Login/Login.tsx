@@ -36,7 +36,7 @@ export default function Login(): JSX.Element {
       <Grid
         container
         flexDirection="column"
-        sx={{ border: '2px solid blue', width: 400, height: 600 }}
+        sx={{ width: 400, height: 600 }}
         justifyContent="center"
         alignItems="center"
         rowGap={4}
@@ -58,7 +58,9 @@ export default function Login(): JSX.Element {
         <StyledButton type="submit" variant="outlined" color="success" disabled={disabled}>
           Отправить
         </StyledButton>
-        <p>Если у вас нет аккаунта, зарегистрируйтесь</p>
+        <p>
+          Если у вас нет аккаунта, <a href="register">зарегистрируйтесь</a>
+        </p>
       </Grid>
     </Container>
   );

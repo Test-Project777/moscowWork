@@ -27,25 +27,6 @@ export default function CustomTextField({
       onChange={onChange}
       variant="outlined"
       label={label}
-      sx={{
-        '& label.Mui-focused': {
-          color: '#DC7A65',
-        },
-        '& .MuiInput-underline:after': {
-          borderBottomColor: '#B2BAC2',
-        },
-        '& .MuiOutlinedInput-root': {
-          '& fieldset': {
-            borderColor: '#E0E3E7',
-          },
-          '&:hover fieldset': {
-            borderColor: '#B2BAC2',
-          },
-          '&.Mui-focused fieldset': {
-            borderColor: 'black',
-          },
-        },
-      }}
     />
   );
 }
