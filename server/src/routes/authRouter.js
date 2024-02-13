@@ -29,7 +29,10 @@ authRouter.post('/login', async (req, res) => {
     res.status(500).json(error);
   }
 });
-
+authRouter.get('/user', (req, res) => {
+  const allUser = User.findAll();
+  res.json(allUser);
+});
 authRouter.post('/signup', async (req, res) => {
   try {
     const {
@@ -56,8 +59,7 @@ authRouter.post('/signup', async (req, res) => {
       },
     });
 
-    if (!created)
-      return res.status(400).json({ message: 'Email already exists' });
+    if (!created) return res.status(400).json({ message: 'Email already exists' });
 
     const plainUser = user.get();
     delete plainUser.hashpass;
