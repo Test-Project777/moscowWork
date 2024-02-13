@@ -1,7 +1,7 @@
 import { Container, Grid } from '@mui/material';
 import React, { useEffect, useState } from 'react';
 import CustomTextField from '../../components/custom-textfield/CustomTextField';
-import StyledButton from '../../components/custom-textfield/custom-button/styled';
+import StyledButton from '../../components/custom-button/styled';
 
 export default function Login(): JSX.Element {
   const [disabled, setDisabled] = useState<boolean>(false);
@@ -36,7 +36,7 @@ export default function Login(): JSX.Element {
       <Grid
         container
         flexDirection="column"
-        sx={{ width: 400, height: 600 }}
+        sx={{ width: 400, height: 600}}
         justifyContent="center"
         alignItems="center"
         rowGap={4}
