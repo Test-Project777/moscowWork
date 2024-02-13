@@ -45,6 +45,7 @@ authRouter.post('/signup', async (req, res) => {
       number,
       img = 'https://static.vecteezy.com/system/resources/thumbnails/005/545/335/small_2x/user-sign-icon-person-symbol-human-avatar-isolated-on-white-backogrund-vector.jpg',
     } = req.body;
+    console.log(req.body,"back");
 
     const [user, created] = await User.findOrCreate({
       where: { email },
