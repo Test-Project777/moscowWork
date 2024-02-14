@@ -29,10 +29,7 @@ authRouter.post('/login', async (req, res) => {
     res.status(500).json(error);
   }
 });
-authRouter.get('/user', (req, res) => {
-  const allUser = User.findAll();
-  res.json(allUser);
-});
+
 authRouter.post('/signup', async (req, res) => {
   try {
     const {
@@ -40,8 +37,7 @@ authRouter.post('/signup', async (req, res) => {
       password,
       name,
       info,
-      roleId,
-      statusId,
+      role,
       number,
       img = 'https://static.vecteezy.com/system/resources/thumbnails/005/545/335/small_2x/user-sign-icon-person-symbol-human-avatar-isolated-on-white-backogrund-vector.jpg',
     } = req.body;
@@ -54,8 +50,7 @@ authRouter.post('/signup', async (req, res) => {
         hashpass: await bcrypt.hash(password, 10),
         info,
         img,
-        roleId,
-        statusId,
+        role,
         number,
       },
     });

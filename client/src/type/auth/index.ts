@@ -16,7 +16,6 @@ export type UserWithRec = UserType & { Comments: RecomType[] };
 
 export type BackendAuth = { user: UserType; accessToken: string };
 
-
 // Redux Slice State
 export type AuthState = {
   user: any;
@@ -35,7 +34,7 @@ export type SignupFormData = {
   mentorStatus: boolean;
   info: string;
   img: string;
-  statusId: number | null;
+  role: string;
 };
 export type UserEditForm = {
   email: string;
