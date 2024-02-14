@@ -5,6 +5,7 @@ const cookieParser = require('cookie-parser');
 const path = require('path');
 const tokensRouter = require('./routes/tokensRouter');
 const authRouter = require('./routes/authRouter');
+const vacansyRouter = require('./routes/vacansyRouter');
 
 
 const app = express();
@@ -23,6 +24,7 @@ app.use(express.json());
 
 app.use('/tokens', tokensRouter);
 app.use('/auth', authRouter);
+app.use('/api', vacansyRouter);
 // app.use(express.static(path.join(__dirname, '..', 'dist')));
 // app.get('/*', (req, res) => {
 //   res.sendFile(path.join(__dirname, '..', 'dist', 'index.html'));

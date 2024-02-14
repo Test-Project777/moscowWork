@@ -3,12 +3,12 @@ import { configureStore } from '@reduxjs/toolkit';
 // import authReducer from './slices/auth/authReducer'
 
 import authReducer from './slices/auth';
-
+import vacansysSlice from './slices/vacansy';
 
 export const store = configureStore({
   reducer: {
     authSlice: authReducer,
-    
+    vacSlice: vacansysSlice,
   },
 });
 

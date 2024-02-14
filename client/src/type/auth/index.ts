@@ -7,7 +7,7 @@ export type UserType = {
   info: string;
   img: string;
   number: string | null;
-  statusId: number | null;
+  status:  UserState
   roleId: number;
   Kurator?: [] | null;
 };

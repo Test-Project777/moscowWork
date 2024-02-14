@@ -24,6 +24,9 @@ module.exports = {
       info: {
         type: Sequelize.TEXT,
       },
+      format:{
+        type: Sequelize.STRING,
+      },
       userId: {
         type: Sequelize.INTEGER,
         references: {

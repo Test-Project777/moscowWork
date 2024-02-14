@@ -59,6 +59,7 @@ export default function RegistrForm(): JSX.Element {
           }
 
           void dispatch(thunkSignup(formData));
+          window.location.href = '/';
         }}
       >
         <TextField
@@ -84,7 +85,7 @@ export default function RegistrForm(): JSX.Element {
           variant="outlined"
           fullWidth
           margin="normal"
-          name="password"
+          name="hashpass"
           type="password"
           value={formFields.password}
           onChange={handleInputChange}
