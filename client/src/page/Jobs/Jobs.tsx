@@ -8,11 +8,15 @@ export default function Jobs(): JSX.Element {
   console.log(allVacansyes, 111111);
 
   return (
-    <div style={{ display: 'flex' }}>
-      {allVacansyes.map((card) => (
-        <CardVacansy card={card} key={card.id} />
-      ))}
-      <SettingMenu />
+    <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'start' }}>
+      <div>
+        {allVacansyes.map((card) => (
+          <CardVacansy card={card} key={card.id} />
+        ))}
+      </div>
+      <div>
+        <SettingMenu />
+      </div>
     </div>
   );
 }

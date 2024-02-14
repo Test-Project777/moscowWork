@@ -12,7 +12,7 @@ export default function CardVacansy({ card }: Props): JSX.Element {
         style={{
           height: '270px',
           width: '800px',
-          backgroundColor: 'yellow',
+          backgroundColor: 'whitesmoke',
           margin: '20px',
           display: 'flex',
           flexDirection: 'column',

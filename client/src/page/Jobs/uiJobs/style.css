@@ -1,5 +1,8 @@
 .setMenuBox {
   background-color: wheat;
-  height: 1200px;
+  height: 100%;
   width: 400px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
 }
