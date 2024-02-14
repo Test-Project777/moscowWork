@@ -1,9 +1,14 @@
-import { Button } from '@mui/material';
+import { Avatar, Button } from '@mui/material';
 import React, { useState } from 'react';
 import './style.css';
 import { NavLink } from 'react-router-dom';
+import type { UserType } from '../../type/auth';
 
-export default function Navbar(): JSX.Element {
+type Props = {
+  user: UserType;
+};
+
+export default function Navbar({ user }: Props): JSX.Element {
   const [selectedItem, setSelectedItem] = useState('');
 
   return (
@@ -13,18 +18,24 @@ export default function Navbar(): JSX.Element {
         <a href="/jobs" className="findJobs">
           <p className={selectedItem === 'search' ? 'selected' : ''}>Найти вакансию</p>
         </a>
-        <a href="/account" className='findJobs'>
+        <a href="/account" className="findJobs">
           <p className={selectedItem === 'resume' ? 'selected' : ''}>Разместить резюме</p>
         </a>
-        <Button
-          className="btnMenu"
-          onClick={() => {
-            window.location.href = '/login';
-          }}
-          variant="outlined"
-        >
-          Войти
-        </Button>
+        {user ? (
+          <a href="/account" className='findJobs'>
+            <Avatar alt={user.name} src={user.img} />
+          </a>
+        ) : (
+          <Button
+            className="btnMenu"
+            onClick={() => {
+              window.location.href = '/login';
+            }}
+            variant="outlined"
+          >
+            Войти
+          </Button>
+        )}
       </div>
     </div>
   );

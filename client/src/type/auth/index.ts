@@ -18,9 +18,13 @@ export type BackendAuth = { user: UserType; accessToken: string };
 
 // Redux Slice State
 export type AuthState = {
-  user: any;
+  user: UserType;
   accessToken: string;
 };
+export type UserState =
+  | ({ status: 'authenticated' } & UserType)
+  | ({ status: 'pending' } & UserType)
+  | ({ status: 'guest' } & UserType);
 
 export type LoginFormData = {
   email: string;
@@ -44,6 +48,4 @@ export type UserEditForm = {
 };
 export type UsersState = {
   selectedUser: UserType | null;
-  nastavnik: UserType | null;
-  allUser: UserType[];
 };
