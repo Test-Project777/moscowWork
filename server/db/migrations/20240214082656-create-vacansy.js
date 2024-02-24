@@ -24,7 +24,13 @@ module.exports = {
       info: {
         type: Sequelize.TEXT,
       },
-      format:{
+      format: {
+        type: Sequelize.STRING,
+      },
+      education: {
+        type: Sequelize.STRING,
+      },
+      expireance: {
         type: Sequelize.STRING,
       },
       userId: {
@@ -38,13 +44,11 @@ module.exports = {
         allowNull: false,
         type: Sequelize.DATE,
         defaultValue: Sequelize.fn('now'),
-
       },
       updatedAt: {
         allowNull: false,
         type: Sequelize.DATE,
         defaultValue: Sequelize.fn('now'),
-
       },
     });
   },

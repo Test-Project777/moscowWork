@@ -2,34 +2,19 @@ import React, { useEffect, useState } from 'react';
 import './uiStyle.css';
 import axios from 'axios';
 import CardLogoCompany from './CardLogoCompany';
-
-type Card = {
-  id: number;
-  title: string;
-  image: string;
-};
+import { useAppSelector } from '../../../redux/hooks';
+import type { VacancyType } from '../../../type/vacansy';
 
 export default function ImageListLogoCompany(): JSX.Element {
-  const [card, setCard] = useState<Card[]>([]);
-  useEffect(() => {
-    void axios
-      .get<Card[]>('https://fakestoreapi.com/products')
-      .then((res) => {
-        setCard(res.data);
-        return res.data;
-      })
-      .catch((error) => {
-        console.error('Error fetching data:', error);
-      });
-  }, []);
-  console.log(card);
+  const allLogo = useAppSelector((state) => state.vacSlice.vacancy);
+  console.log(allLogo);
 
   return (
     <div className="imageLogoContainer">
-      {card.map((item) => (
+      {allLogo.map((item) => (
         <CardLogoCompany key={item.id} item={item} />
       ))}
-      <div className='textA'>
+      <div className="textA">
         <a href="/jobs">Поиск работы по компании {'>'}</a>
       </div>
     </div>

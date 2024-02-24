@@ -9,7 +9,6 @@ import Footer from './ui/Footer/Footer';
 import Navbar from './ui/Navbar/Navbar';
 import Account from './page/Account/Account';
 import { useAppDispatch, useAppSelector } from './redux/hooks';
-import PrivateRouter from './components/HOC/PrivateRouter';
 import Jobs from './page/Jobs/Jobs';
 import { thunkCheckAuth } from './redux/slices/auth/createAsyncThunks';
 import { thunkLoadVacansy } from './redux/slices/vacansy/createAsyncThunk';

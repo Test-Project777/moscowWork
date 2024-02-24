@@ -7,10 +7,10 @@ type Props = {
 };
 export default function CardVacansy({ card }: Props): JSX.Element {
   return (
-    <div style={{ height: '100%', width: '830px' }}>
+    <div style={{ height: '100%', width: '830px', marginRight:'15px'}}>
       <div
         style={{
-          height: '270px',
+          height: '100%',
           width: '800px',
           backgroundColor: 'whitesmoke',
           margin: '20px',
@@ -23,6 +23,9 @@ export default function CardVacansy({ card }: Props): JSX.Element {
           <div>
             <h3 style={{ marginLeft: '30px' }}>{card.name}</h3>
             <p style={{ marginLeft: '30px' }}>{card.company}</p>
+            <p style={{ marginLeft: '30px' }}>Опыт работы: {card.expireance}</p>
+            <h4 style={{ marginLeft: '30px' }}>Заработная плата до вычета налога: {card.price}</h4>
+            
           </div>
           <div>
             <img src={card.image} alt="" />
@@ -37,6 +40,7 @@ export default function CardVacansy({ card }: Props): JSX.Element {
             display: 'flex',
             justifyContent: 'space-evenly',
             marginLeft: '15px',
+            marginBottom:'5px'
           }}
         >
           <Button variant="contained">Откликнуться</Button>

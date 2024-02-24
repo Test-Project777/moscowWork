@@ -1,12 +1,10 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useAppSelector } from '../../redux/hooks';
 import CardVacansy from './uiJobs/CardVacansy';
 import SettingMenu from './uiJobs/SettingMenu';
 
 export default function Jobs(): JSX.Element {
   const allVacansyes = useAppSelector((state) => state.vacSlice.vacancy);
-  console.log(allVacansyes, 111111);
-
   return (
     <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'start' }}>
       <div>
@@ -15,7 +13,7 @@ export default function Jobs(): JSX.Element {
         ))}
       </div>
       <div>
-        <SettingMenu />
+        <SettingMenu  />
       </div>
     </div>
   );

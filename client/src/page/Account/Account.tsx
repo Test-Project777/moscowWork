@@ -3,6 +3,7 @@ import CloudUploadIcon from '@mui/icons-material/CloudUpload';
 import { Button, Grid } from '@mui/material';
 import CustomTextField from '../../components/custom-textfield/CustomTextField';
 import { VisuallyHiddenInput } from '../Main/ui/AddResume';
+import AccoutSettings from './ui/AccoutSettings';
 
 export default function Account(): JSX.Element {
   const [disabled, setDisabled] = useState<boolean>(false);
@@ -76,6 +77,7 @@ export default function Account(): JSX.Element {
         Загрузить файл
         <VisuallyHiddenInput type="file" />
       </Button>
+      <AccoutSettings/>
     </Grid>
   );
 }

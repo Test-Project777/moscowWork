@@ -25,7 +25,14 @@ export default function AddResume(): JSX.Element {
         предложить вам работу.
       </p>
       <div className="addResumeButton">
-        <Button className="btnAddResume" variant="contained" color="success">
+        <Button
+          onClick={() => {
+            window.location.href = '/account';
+          }}
+          className="btnAddResume"
+          variant="contained"
+          color="success"
+        >
           Создать
         </Button>
         <Button component="label" variant="contained" startIcon={<CloudUploadIcon />}>

@@ -12,7 +12,7 @@ export default function RegistrForm(): JSX.Element {
   const [formFields, setFormFields] = useState({
     name: '',
     email: '',
-    password: '',
+    hashpass: '',
     info: '',
     number: '',
   });
@@ -87,7 +87,7 @@ export default function RegistrForm(): JSX.Element {
           margin="normal"
           name="hashpass"
           type="password"
-          value={formFields.password}
+          value={formFields.hashpass}
           onChange={handleInputChange}
         />
         <TextField
