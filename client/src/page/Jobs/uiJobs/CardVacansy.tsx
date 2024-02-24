@@ -1,3 +1,6 @@
+/* eslint-disable jsx-a11y/click-events-have-key-events */
+/* eslint-disable jsx-a11y/no-static-element-interactions */
+/* eslint-disable react/jsx-no-comment-textnodes */
 import React from 'react';
 import { Button } from '@mui/material';
 import type { VacancyType } from '../../../type/vacansy';
@@ -6,9 +9,15 @@ type Props = {
   card: VacancyType;
 };
 export default function CardVacansy({ card }: Props): JSX.Element {
+  const redirectHandler = (): void => {
+    window.location.href = `/vacancy/${card.id}`;
+  };
   return (
-    <div style={{ height: '100%', width: '830px', marginRight:'15px'}}>
+    <div style={{ height: '100%', width: '830px', marginRight: '15px' }}>
       <div
+        onClick={(): void => {
+          redirectHandler();
+        }}
         style={{
           height: '100%',
           width: '800px',
@@ -25,7 +34,6 @@ export default function CardVacansy({ card }: Props): JSX.Element {
             <p style={{ marginLeft: '30px' }}>{card.company}</p>
             <p style={{ marginLeft: '30px' }}>Опыт работы: {card.expireance}</p>
             <h4 style={{ marginLeft: '30px' }}>Заработная плата до вычета налога: {card.price}</h4>
-            
           </div>
           <div>
             <img src={card.image} alt="" />
@@ -40,7 +48,7 @@ export default function CardVacansy({ card }: Props): JSX.Element {
             display: 'flex',
             justifyContent: 'space-evenly',
             marginLeft: '15px',
-            marginBottom:'5px'
+            marginBottom: '5px',
           }}
         >
           <Button variant="contained">Откликнуться</Button>

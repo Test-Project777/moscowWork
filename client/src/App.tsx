@@ -12,6 +12,7 @@ import { useAppDispatch, useAppSelector } from './redux/hooks';
 import Jobs from './page/Jobs/Jobs';
 import { thunkCheckAuth } from './redux/slices/auth/createAsyncThunks';
 import { thunkLoadVacansy } from './redux/slices/vacansy/createAsyncThunk';
+import OneVacancyPage from './page/OneVacancy/OneVacancyPage';
 
 function App(): JSX.Element {
   const dispatch = useAppDispatch();
@@ -34,6 +35,7 @@ function App(): JSX.Element {
         {/* </Route> */}
         <Route path="/account" element={<Account />} />
         <Route path="/jobs" element={<Jobs />} />
+        <Route path="/vacancy/:id" element={<OneVacancyPage />} />
       </Routes>
       <Footer />
     </>
