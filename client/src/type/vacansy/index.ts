@@ -7,6 +7,7 @@ export type VacancyType = {
   info: string;
   userId: number;
   format: string;
+  catId: number;
   expireance: string;
   education: string;
   createdAt: string;
@@ -30,4 +31,15 @@ export type VacansysState = {
   sortOpytRab1_3: [] | VacancyType[];
   sortOpytRab3_6: [] | VacancyType[];
   sortOpytRabBolee6: [] | VacancyType[];
+};
+export type AddVacancyFormData = {
+  name: string;
+  price: string;
+  image: string;
+  company: string;
+  info: string;
+  format: string;
+  catId: string;
+  expireance: string;
+  education: string;
 };

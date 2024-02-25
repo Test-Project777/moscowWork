@@ -10,6 +10,7 @@ type Props = {
 
 export default function Navbar({ user }: Props): JSX.Element {
   const [selectedItem, setSelectedItem] = useState('');
+  console.log(user, 123);
 
   return (
     <div className="menu">
@@ -18,14 +19,8 @@ export default function Navbar({ user }: Props): JSX.Element {
         <a href="/jobs" className="findJobs">
           <p className={selectedItem === 'search' ? 'selected' : ''}>Найти вакансию</p>
         </a>
-        <a href="/account" className="findJobs">
-          <p className={selectedItem === 'resume' ? 'selected' : ''}>Разместить резюме</p>
-        </a>
-        {user ? (
-          <a href="/account" className='findJobs'>
-            <Avatar alt={user.name} src={user.img} />
-          </a>
-        ) : (
+
+        {user.status === 'guest' ? (
           <Button
             className="btnMenu"
             onClick={() => {
@@ -35,6 +30,15 @@ export default function Navbar({ user }: Props): JSX.Element {
           >
             Войти
           </Button>
+        ) : (
+          <>
+            <a href="/accountcompany" className="findJobs">
+              <p className={selectedItem === 'resume' ? 'selected' : ''}>Разместить вакансию</p>
+            </a>
+            <a href="/account" className="findJobs">
+              <Avatar alt={user.name} src={user.img} />
+            </a>
+          </>
         )}
       </div>
     </div>

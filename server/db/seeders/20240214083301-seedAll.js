@@ -102,6 +102,67 @@ module.exports = {
       {},
     );
     await queryInterface.bulkInsert(
+      'Categories',
+      [
+        {
+          name: 'Автомобильный бизнес',
+        },
+        {
+          name: 'Административный персонал',
+        },
+        {
+          name: 'Безопасность',
+        },
+        {
+          name: 'Высший и средний менеджмент',
+        },
+        {
+          name: 'Добыча сырья',
+        },
+        {
+          name: 'Домашний, обслуживающий персонал',
+        },
+        {
+          name: 'Закупки',
+        },
+        {
+          name: 'Информационные технологии',
+        },
+        {
+          name: 'Искусство, развлечения, массмедиа',
+        },
+        {
+          name: 'Маркетинг, реклама, PR',
+        },
+        {
+          name: 'Медицина, фармацевтика',
+        },
+        {
+          name: 'Наука, образование',
+        },
+        {
+          name: 'Продажи, обслуживание клиентов',
+        },
+        {
+          name: 'Производство, сервисное обслуживание',
+        },
+        { name: 'Рабочий персонал' },
+        { name: 'Розничная торговля' },
+        { name: 'Сельское хозяйство' },
+        { name: 'Спортивные клубы, фитнес, салоны красоты' },
+        { name: 'Стратегия, инвестиции, консалтинг' },
+        { name: 'Страхование' },
+        { name: 'Строительство, недвижимость' },
+        { name: 'Транспорт, логистика, перевозки' },
+        { name: 'Туризм, гостиницы, рестораны' },
+        { name: 'Управление персоналом, тренинги' },
+        { name: 'Финансы, бухгалтерия' },
+        { name: 'Юристы' },
+        { name: 'Другое' },
+      ],
+      {},
+    );
+    await queryInterface.bulkInsert(
       'Vacansies',
       [
         {
@@ -115,6 +176,7 @@ module.exports = {
           format: 'Сменный график',
           education: 'Среднее',
           expireance: '3-6 лет',
+          catId: 8
         },
         {
           name: 'Frontend developer',
@@ -127,6 +189,8 @@ module.exports = {
           format: 'Удаленная работа',
           education: 'Высшее',
           expireance: '1-3 лет',
+          catId: 8
+
         },
         {
           name: 'Frontend developer',
@@ -139,6 +203,8 @@ module.exports = {
           education: 'Высшее',
           expireance: '1-3 лет',
           format: 'Удаленная работа',
+          catId: 8
+
         },
         {
           name: 'Backend developer',
@@ -151,6 +217,8 @@ module.exports = {
           format: 'Гибкий график',
           education: 'Нет',
           expireance: 'нет',
+          catId: 8
+
         },
         {
           name: 'Fullstack developer',
@@ -163,6 +231,8 @@ module.exports = {
           format: 'Вахтовый метод',
           education: 'Высшее',
           expireance: '3-6 лет',
+          catId: 8
+
         },
         {
           name: 'Уборщик',
@@ -175,6 +245,8 @@ module.exports = {
           format: 'Полная занятость',
           education: 'Среднее',
           expireance: '1-3 лет',
+          catId: 15
+          
         },
         {
           name: 'Проститутка developer',
@@ -187,6 +259,8 @@ module.exports = {
           format: 'Полная занятость',
           education: 'Высшее',
           expireance: 'нет',
+          catId: 8
+
         },
       ],
       {},
