@@ -1,5 +1,3 @@
-import type { RecomType } from '../recomedation';
-
 export type UserType = {
   id: number;
   name: string;
@@ -7,12 +5,11 @@ export type UserType = {
   info: string;
   img: string;
   number: string | null;
-  status:  UserState
+  status: UserState;
   roleId: number;
   Kurator?: [] | null;
 };
 
-export type UserWithRec = UserType & { Comments: RecomType[] };
 
 export type BackendAuth = { user: UserType; accessToken: string };
 

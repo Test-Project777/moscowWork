@@ -13,15 +13,18 @@ import Jobs from './page/Jobs/Jobs';
 import { thunkCheckAuth } from './redux/slices/auth/createAsyncThunks';
 import { thunkLoadVacansy } from './redux/slices/vacansy/createAsyncThunk';
 import OneVacancyPage from './page/OneVacancy/OneVacancyPage';
+import AccountCompanyPage from './page/AccountCompany/AccountCompanyPage';
+import { thunkLoadCategories } from './redux/slices/category/createAsyncThunk';
 
 function App(): JSX.Element {
   const dispatch = useAppDispatch();
-  const user = useAppSelector((store) => store.authSlice);
-  console.log(user);
+  const user = useAppSelector((store) => store.authSlice.user);
+  console.log(user, 222);
   useEffect(() => {
     void dispatch(thunkCheckAuth());
     void dispatch(thunkLoadVacansy());
-  }, []);
+    void dispatch(thunkLoadCategories());
+  }, [dispatch]);
   return (
     <>
       <Navbar user={user} />
@@ -36,6 +39,7 @@ function App(): JSX.Element {
         <Route path="/account" element={<Account />} />
         <Route path="/jobs" element={<Jobs />} />
         <Route path="/vacancy/:id" element={<OneVacancyPage />} />
+        <Route path="/accountcompany" element={<AccountCompanyPage />} />
       </Routes>
       <Footer />
     </>

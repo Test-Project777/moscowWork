@@ -1,7 +1,7 @@
 import { createSlice } from '@reduxjs/toolkit';
 import type { PayloadAction } from '@reduxjs/toolkit';
 import type { VacancyType, VacansysState } from '../../../type/vacansy';
-import { thunkLoadVacansy } from './createAsyncThunk';
+import { thunkAddVacancy, thunkLoadVacansy } from './createAsyncThunk';
 
 const initialState: VacansysState = {
   vacancy: [],
@@ -95,6 +95,9 @@ export const vacansysSlice = createSlice({
     builder.addCase(thunkLoadVacansy.fulfilled, (state, action) => {
       state.vacancy = action.payload;
       state.allVacans = action.payload;
+    });
+    builder.addCase(thunkAddVacancy.fulfilled, (state, action) => {
+      state.vacancy.push(action.payload);
     });
   },
 });
