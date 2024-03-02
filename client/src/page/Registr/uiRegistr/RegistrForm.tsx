@@ -57,6 +57,7 @@ export default function RegistrForm(): JSX.Element {
           } else if (selectedRole === 'Работодатель') {
             formData.role = 'Работодатель';
           }
+          
 
           void dispatch(thunkSignup(formData));
           window.location.href = '/';

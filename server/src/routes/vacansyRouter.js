@@ -12,6 +12,7 @@ vacancyRouter.post('/', async (req, res) => {
     const { name, info, image, company, format, expireance, education } = req.body;
     const newVacancy = await Vacansy.create({
       ...req.body,
+      image: `http://localhost:3001${image}`,
     });
     res.status(201).json(newVacancy);
   } catch (error) {

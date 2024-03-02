@@ -33,7 +33,10 @@ export default function AddVacancyModal({ open, handleClose }: AddVacancyModalPr
   const [chekFormRabot, setChekFormRabot] = useState('');
   const [chekOpytRabot, setChekOpytRabot] = useState('');
   const [chekObrazovanie, setChekObrazovanie] = useState('');
+  const [pathPhoto, setPathPhoto] = useState('');
   const dispatch = useAppDispatch();
+  console.log(pathPhoto, 'путь до фотки');
+
   return (
     <div>
       <Modal
@@ -56,6 +59,7 @@ export default function AddVacancyModal({ open, handleClose }: AddVacancyModalPr
               formData.catId = chekVacancyType;
               formData.expireance = chekOpytRabot;
               formData.education = chekObrazovanie;
+              formData.image = pathPhoto;
               void dispatch(thunkAddVacancy(formData));
             }}
           >
@@ -85,7 +89,7 @@ export default function AddVacancyModal({ open, handleClose }: AddVacancyModalPr
                   setChekVacancyType={setChekVacancyType}
                   chekVacancyType={chekVacancyType}
                 />
-                <AddLogoVacancy />
+                <AddLogoVacancy setPathPhoto={setPathPhoto} />
               </div>
               <TextField
                 style={{ marginBottom: '15px' }}

@@ -1,7 +1,5 @@
-import { Button, Container, Grid } from '@mui/material';
+import { Button, Container, Grid, TextField } from '@mui/material';
 import React, { useEffect, useState } from 'react';
-import CustomTextField from '../../components/custom-textfield/CustomTextField';
-import StyledButton from '../../components/custom-textfield/custom-button/CustomButton';
 import { useAppDispatch } from '../../redux/hooks';
 import type { LoginFormData } from '../../type/auth';
 import { thunkLogin } from '../../redux/slices/auth/createAsyncThunks';
@@ -35,50 +33,66 @@ export default function Login(): JSX.Element {
   }, [input]);
 
   return (
-    <Container>
-      <Grid
-        container
-        flexDirection="column"
-        sx={{ width: 400, height: 600, borderRadius: '20px' }}
-        justifyContent="center"
-        alignItems="center"
-        rowGap={4}
+    <div
+      style={{
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+        flexDirection: 'column',
+        height: '100vh',
+      }}
+    >
+      <form
+        onSubmit={(e) => {
+          e.preventDefault();
+          const formData = Object.fromEntries(new FormData(e.currentTarget)) as LoginFormData;
+          void dispatch(thunkLogin(formData));
+          window.location.href = '/';
+        }}
       >
-        <form
-          onSubmit={(e) => {
-            e.preventDefault();
-            const formData = Object.fromEntries(new FormData(e.currentTarget)) as LoginFormData;
-            void dispatch(thunkLogin(formData));
+        <div
+          style={{
+            display: 'flex',
+            flexDirection: 'column',
+            justifyContent: 'center',
+            alignItems: 'center',
+            width: '290px',
+            height: '600px',
+            borderRadius: '20px',
+            backgroundColor: 'whitesmoke',
+            boxShadow: '0px 4px 8px rgba(0, 0, 0, 0.2)',
+            padding: '20px',
+            marginTop: '150px',
+            marginBottom: '150px',
           }}
         >
-          <CustomTextField
+          <h2 style={{ marginBottom: '40px' }}>Авторизация</h2>
+          <TextField
             name="email"
             type="text"
             placeholder="Введите"
             label="Введите ваш Email"
             onChange={changeHandler}
+            style={{ marginTop: '50px' }}
           />
-          <CustomTextField
+          <TextField
             name="password"
             type="text"
             placeholder="Введите"
             label="Введите ваш пароль"
             onChange={changeHandler}
+            style={{ marginTop: '50px' }}
           />
-          <Button
-            variant="contained"
-            color="primary"
-            type="submit"
-            fullWidth
-            style={{ marginTop: 60 }}
-          >
+          <Button variant="contained" color="primary" type="submit" style={{ marginTop: 60 }}>
             Войти
           </Button>
-        </form>
-        <p>
-          Если у вас нет аккаунта, <a href="register">Зарегистрируйтесь</a>
-        </p>
-      </Grid>
-    </Container>
+        </div>
+        <div style={{ marginTop: '370px' }}>
+          <p>
+            Если у вас нет аккаунта, <a href="register">Зарегистрируйтесь</a>
+          </p>
+        </div>
+      </form>
+    </div>
   );
 }

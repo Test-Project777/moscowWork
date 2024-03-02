@@ -1,0 +1,155 @@
+binf-widgets.csui-control-refrowpicker {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.csui-control-refrowpicker .cs-search {
+  position: absolute;
+  width: calc(100% - 2em);
+}
+.csui-control-refrowpicker .cs-search::-ms-clear {
+  display: none;
+}
+.csui-control-refrowpicker .cs-search-clear {
+  position: absolute;
+  height: 1em;
+  width: 1em;
+  right: 2.5em;
+  top: 0.5625em;
+}
+csui-control-refrowpicker .cs-search-icon {
+  position: absolute;
+  width: 1em;
+  height: 1em;
+  right: 0.25em;
+  top: 0.5625em;
+}
+.csui-control-refrowpicker scroll-container {
+  border: 1px solid #ddd;
+  border-radius: 0;
+  z-index: 10;
+  overflow: hidden;
+}
+.csui-control-refrowpicker .scroll-container ul.binf-dropdown-menu {
+  border: 0;
+  border-radius: 0;
+  position: static;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+csui-control-refrowpicker .scroll-container .binf-dropdown-menu > li {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: #fff;
+  border-bottom: 1px solid #ddd;
+}
+
+.csui-control-refrowpicker .scroll-container .binf-dropdown-menu > li.noresult {
+  font:
+    14px/28px Arial,
+    a;
+  background: #3b73af;
+  color: #fff;
+  padding: 0.5em;
+}
+.csui-control-refrowpicker .scroll-container binf-dropdown-menu > li span {
+  font:
+    14px/18px Arial,
+    a;
+  white-space: normal;
+  hyphens: auto;
+}
+.csui-control-refrowpicker scroll-container binf-dropdown-menu > li a {
+  font:
+    14px/18px Arial,
+    a;
+  white-space: nowrap;
+  hyphens: auto;
+  margin: 0;
+  padding: 4px 2px 4px 0.5em;
+}
+
+.csui-control-refrowpicker .scroll-container .binf-dropdown-menu > li.bint-active a {
+  background: #3b73af; /*#bac9ce;*/
+  cursor: pointer;
+}
+.csui-control-refrowpicker .scroll-container .binf-dropdown-menu > li i {
+  font-style: normal;
+  /*
+font: normal 11px/18px Arial,a;
+color: #888;
+display: inline-block;
+text-align: right;
+margin: 6px 0 0; */
+}
+.csui-control-refrowpicker .scroll-container .binf-dropdown-menu > li.binf-active i {
+  color: #fff;
+}
+.csui-control-refrowpicker .scroll-container .binf-dropdown-menu li em {
+  font-weight: bold;
+}
+
+csui-control-refrowpicker picker-spacer {
+  height: 500px;
+}
+.csui-control-refrowpicker .typeahead {
+  display: block;
+}
+
+csui-control-refrowpicker typeahead.binf-dropdown-menu > li > a > div.innerrefrowpicker {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.cs-form-multi-action-container
+  button.alpaca-array-actionbar-action.binf-btn.binf-btn-default.binf-btn-sm[data-alpaca-array-actionbar-action='remove'] {
+  display: block !important;
+  top: 7px;
+  right: 0px !important;
+  visibility: visible !important;
+}
+div.edit-list-container {
+  margin-right: 8px;
+}
+.cs-textfield .cs-field-write-inner picker-container {
+  -webkit-box-flex: 1 1 0;
+  -moz-box-flex: 1 1 0;
+  -webkit-flex: 1 1 0;
+  -ms-flex: 1 1 0;
+  flex: 1 1 0;
+  width: 100%;
+  height: 28px;
+}
+.cs-textfield .cs-field-write-inner input {
+  -webkit-flex: 1 1 0;
+  -ms-flex: 1 1 100%;
+  flex: 1 1 0;
+  padding-left: 0.5em;
+  padding-top: 0;
+  padding-bottom: 0;
+  border: 1px solid #a7a9ac;
+  border-radius: 3px;
+  margin: 0;
+  height: 28px;
+}
+.cs-form .alpaca-field .has-error .cs-field-write input {
+  color: #000000;
+  background-color: #fae9ea;
+  border: 1px solid #df3324;
+}
+.cs-textfield input:focus {
+  outline: none;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  border: 2px solid #666666;
+  border-radius: 3px;
+}
+cs-pull-left cs-textfield .cs-field-write-inner {
+  display: block;
+}
+.cs-textfield .cs-field-write-inner {
+  display: flex;
+  height: 100%;
+}
