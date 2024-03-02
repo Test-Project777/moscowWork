@@ -16,6 +16,7 @@ import ShareIcon from '@mui/icons-material/Share';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import MoreVertIcon from '@mui/icons-material/MoreVert';
 import type { VacancyType } from '../../../type/vacansy';
+import ButtonDelEdit from './ButtonDelEdit';
 
 type ExpandMoreProps = {
   expand: boolean;
@@ -41,13 +42,17 @@ export default function VacancyCardCompany({ item }: VacancyCardCompanyProps): R
   const handleExpandClick = (): void => {
     setExpanded(!expanded);
   };
-  
+
   return (
     <Card sx={{ maxWidth: 345 }}>
       <CardHeader
         avatar={
           <Avatar sx={{ bgcolor: red[500] }} aria-label="recipe">
-            <img style={{objectFit:'cover'}} src={item.image} alt={item.company} />
+            <img
+              style={{ objectFit: 'cover', height: '100px', width: '100px' }}
+              src={item.image}
+              alt={item.company}
+            />
           </Avatar>
         }
         action={
@@ -58,19 +63,18 @@ export default function VacancyCardCompany({ item }: VacancyCardCompanyProps): R
         title={item.name}
         subheader={item.createdAt}
       />
-     
+
       <CardContent>
         <Typography variant="body2" color="text.secondary">
           {item.info}
         </Typography>
       </CardContent>
-      <CardActions disableSpacing>
-        <IconButton aria-label="add to favorites">
-          <FavoriteIcon />
-        </IconButton>
-        <IconButton aria-label="share">
-          <ShareIcon />
-        </IconButton>
+      <CardActions
+        style={{ display: 'flex', justifyContent: 'space-around', alignItems: 'center' }}
+      >
+        <div>
+          <ButtonDelEdit />
+        </div>
         <ExpandMore
           expand={expanded}
           onClick={handleExpandClick}

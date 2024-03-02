@@ -23,6 +23,7 @@ export default function Footer(): JSX.Element {
           Главная
         </a>
       </div>
+      <div style={{ flexGrow: 1 }} /> {/* Пустой блок, занимающий всю доступную высоту */}
     </div>
   );
 }

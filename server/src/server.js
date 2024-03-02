@@ -7,6 +7,7 @@ const tokensRouter = require('./routes/tokensRouter');
 const authRouter = require('./routes/authRouter');
 const vacansyRouter = require('./routes/vacansyRouter');
 const categoryRouter = require('./routes/categoryRouter');
+const uploadRouter = require('./routes/uploadRouter');
 
 const app = express();
 const PORT = process.env.PORT || 3001;
@@ -25,7 +26,8 @@ app.use(express.json());
 app.use('/tokens', tokensRouter);
 app.use('/auth', authRouter);
 app.use('/api', vacansyRouter);
-app.use('/api/category', categoryRouter)
+app.use('/api/category', categoryRouter);
+app.use('/api/photo', uploadRouter);
 // app.use(express.static(path.join(__dirname, '..', 'dist')));
 // app.get('/*', (req, res) => {
 //   res.sendFile(path.join(__dirname, '..', 'dist', 'index.html'));

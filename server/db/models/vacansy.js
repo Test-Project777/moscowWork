@@ -10,6 +10,7 @@ module.exports = (sequelize, DataTypes) => {
     static associate({ User,Category }) {
       this.belongsTo(User, { foreignKey: 'userId' });
       this.belongsTo(Category, { foreignKey: 'catId' });
+
     }
   }
   Vacansy.init(

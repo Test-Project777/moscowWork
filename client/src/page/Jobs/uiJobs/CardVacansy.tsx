@@ -35,8 +35,12 @@ export default function CardVacansy({ card }: Props): JSX.Element {
             <p style={{ marginLeft: '30px' }}>Опыт работы: {card.expireance}</p>
             <h4 style={{ marginLeft: '30px' }}>Заработная плата до вычета налога: {card.price}</h4>
           </div>
-          <div>
-            <img src={card.image} alt="" />
+          <div style={{ height: '150px' }}>
+            <img
+              style={{ objectFit: 'cover', height: '150px', width: '150px' }}
+              src={card.image}
+              alt={card.name}
+            />
           </div>
         </div>
         <div>

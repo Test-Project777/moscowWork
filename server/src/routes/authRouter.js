@@ -34,19 +34,20 @@ authRouter.post('/signup', async (req, res) => {
   try {
     const {
       email,
-      password,
+      hashpass,
       name,
       info,
       role,
       number,
       img = 'https://static.vecteezy.com/system/resources/thumbnails/005/545/335/small_2x/user-sign-icon-person-symbol-human-avatar-isolated-on-white-backogrund-vector.jpg',
     } = req.body;
+    console.log(req.body,"RegaBeck");
 
     const [user, created] = await User.findOrCreate({
       where: { email },
       defaults: {
         name,
-        hashpass: await bcrypt.hash(password, 10),
+        hashpass: await bcrypt.hash(hashpass, 4),
         info,
         img,
         role,

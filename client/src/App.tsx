@@ -26,7 +26,7 @@ function App(): JSX.Element {
     void dispatch(thunkLoadCategories());
   }, [dispatch]);
   return (
-    <>
+    <div>
       <Navbar user={user} />
       <Routes>
         <Route path="/" element={<Main />} />
@@ -42,7 +42,7 @@ function App(): JSX.Element {
         <Route path="/accountcompany" element={<AccountCompanyPage />} />
       </Routes>
       <Footer />
-    </>
+    </div>
   );
 }
 
