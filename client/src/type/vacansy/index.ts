@@ -43,3 +43,8 @@ export type AddVacancyFormData = {
   expireance: string;
   education: string;
 };
+ export type FileUpload ={
+  name: string
+  size: number
+  type: string
+ }
